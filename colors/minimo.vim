@@ -134,7 +134,23 @@ hi! link Ignore NonText
 hi! link htmlTag htmlTagName
 hi! link htmlEndTag htmlTag
 
-" Highlights - Git ------------------------------------------
+" Highlights - Git -----------------------------------------
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link gitcommitSummary Title
+
+" Highlights - FZF -----------------------------------------
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Identifier'],
+  \ 'bg':      ['bg', 'Identifier'],
+  \ 'hl':      ['fg', 'Normal'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'Normal'],
+  \ 'hl+':     ['fg', 'Normal'],
+  \ 'info':    ['fg', 'Comment'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Comment'],
+  \ 'pointer': ['fg', 'Normal'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
