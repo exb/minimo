@@ -139,6 +139,15 @@ hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link gitcommitSummary Title
 
+" Highlights - Javascript ----------------------------------
+call s:h("jsNull",              { "fg": s:accent })
+call s:h("jsTemplateBraces",    { "fg": s:dimmed })
+hi! link jsUndefined jsNull
+
+" Highlights - XML -----------------------------------------
+hi! link xmlAttrib xmlTagName
+hi! link xmlEqual xmlAttrib
+
 " FZF ------------------------------------------------------
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Identifier'],
