@@ -19,7 +19,7 @@ let s:bg           = { "gui": "#262626", "cterm": "235" }
 let s:normal       = { "gui": "#e4e4e4", "cterm": "254" }
 let s:dimmed       = { "gui": "#a8a8a8", "cterm": "248" }
 let s:subtle       = { "gui": "#808080", "cterm": "244" }
-let s:faint        = { "gui": "#626262", "cterm": "241" }
+let s:faint        = { "gui": "#585858", "cterm": "240" }
 
 let s:ui_normal    = { "gui": "#b2b2b2", "cterm": "249" }
 let s:ui_dimmed    = { "gui": "#808080", "cterm": "244" }
@@ -70,12 +70,12 @@ call s:h("Search",       { "fg": s:bg, "bg": s:ui_normal })
 call s:h("StatusLine",   { "fg": s:ui_normal })
 call s:h("StatusLineNC", { "fg": s:ui_normal })
 call s:h("SignColumn",   { "fg": s:ui_normal })
-call s:h("VertSplit",    { "bg": s:bg, "fg": s:ui_faint })
+call s:h("VertSplit",    { "bg": s:bg, "fg": s:ui_subtle })
 call s:h("Folded",       { "fg": s:ui_normal })
 call s:h("Directory",    { "fg": s:ui_normal })
 call s:h("Title",        { "fg": s:ui_dimmed })
-call s:h("DiffAdd",      { "bg": s:green })
-call s:h("DiffDelete",   { "bg": s:red })
+call s:h("DiffAdd",      { "fg": s:green })
+call s:h("DiffDelete",   { "fg": s:red })
 call s:h("DiffChange",   { })
 call s:h("DiffText",     { "fg": s:bg, "bg": s:ui_normal })
 call s:h("WildMenu",     { "fg": s:bg, "bg": s:ui_normal })
@@ -105,7 +105,7 @@ call s:h("Todo",         { "fg": s:bg, "bg": s:dimmed })
 call s:h("Identifier",   { "fg": s:dimmed })
 call s:h("Constant",     { "fg": s:dimmed })
 call s:h("PreProc",      { "fg": s:dimmed })
-call s:h("Operator",     { "fg": s:subtle })
+call s:h("Operator",     { "fg": s:normal })
 hi! link Conditonal Statement
 hi! link Repeat Statement
 hi! link String Character
@@ -139,7 +139,7 @@ hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link gitcommitSummary Title
 
-" Highlights - FZF -----------------------------------------
+" FZF ------------------------------------------------------
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Identifier'],
   \ 'bg':      ['bg', 'Identifier'],
