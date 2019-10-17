@@ -144,6 +144,17 @@ call s:h("jsNull",              { "fg": s:accent })
 call s:h("jsTemplateBraces",    { "fg": s:dimmed })
 hi! link jsUndefined jsNull
 
+" Highlights - CSS -----------------------------------------
+call s:h("cssProp",             { "fg": s:normal })
+call s:h("cssAttr",             { "fg": s:accent })
+call s:h("cssNoise",            { "fg": s:subtle })
+call s:h("cssDefinition",       { "fg": s:subtle })
+call s:h("cssFunctionName",     { "fg": s:normal })
+hi! link cssKeyFrameProp cssProp
+hi! link sassClass cssClassName
+hi! link sassAmpersand cssNoise
+hi! link sassDefinition sassClass
+
 " Highlights - XML -----------------------------------------
 hi! link xmlAttrib xmlTagName
 hi! link xmlEqual xmlAttrib
