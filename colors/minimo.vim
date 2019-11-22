@@ -13,22 +13,30 @@ endif
 
 let g:colors_name = "minimo"
 
+if !exists('g:minimo_color_gui')
+  let g:minimo_color_gui="#8fce5b"
+endif
+
+if !exists('g:minimo_color_cterm')
+  let g:minimo_color_cterm="119"
+endif
+
 " Colors ---------------------------------------------------
 let s:bg           = { "gui": "#262626", "cterm": "235" }
 
 let s:normal       = { "gui": "#e4e4e4", "cterm": "254" }
 let s:dimmed       = { "gui": "#a8a8a8", "cterm": "248" }
 let s:subtle       = { "gui": "#808080", "cterm": "244" }
-let s:faint        = { "gui": "#585858", "cterm": "240" }
+let s:faint        = { "gui": "#626262", "cterm": "241" }
 
 let s:ui_normal    = { "gui": "#b2b2b2", "cterm": "249" }
 let s:ui_dimmed    = { "gui": "#808080", "cterm": "244" }
 let s:ui_subtle    = { "gui": "#444444", "cterm": "238" }
 let s:ui_faint     = { "gui": "#303030", "cterm": "236" }
 
-let s:accent       = { "gui": "#ffa0a0", "cterm": "13"  }
 let s:green        = { "gui": "#8fce5b", "cterm": "119" }
 let s:red          = { "gui": "#d75f5f", "cterm": "167" }
+let s:accent       = { "gui": g:minimo_color_gui, "cterm": g:minimo_color_cterm }
 
 " Utility Function -----------------------------------------
 function! s:h(group, style)
@@ -68,7 +76,7 @@ call s:h("VisualNOS",    { "bg": s:ui_faint })
 call s:h("IncSearch",    { "fg": s:bg, "bg": s:ui_normal })
 call s:h("Search",       { "fg": s:bg, "bg": s:ui_normal })
 call s:h("StatusLine",   { "fg": s:ui_normal })
-call s:h("StatusLineNC", { "fg": s:ui_faint })
+call s:h("StatusLineNC", { "fg": s:ui_subtle })
 call s:h("SignColumn",   { "fg": s:ui_normal })
 call s:h("VertSplit",    { "bg": s:bg, "fg": s:ui_subtle })
 call s:h("Folded",       { "fg": s:ui_normal })
@@ -82,7 +90,7 @@ call s:h("WildMenu",     { "fg": s:bg, "bg": s:ui_normal })
 call s:h("FoldColumn",   { "fg": s:ui_dimmed })
 call s:h("ModeMsg",      { "fg": s:ui_normal })
 call s:h("LineNr",       { "fg": s:ui_subtle })
-call s:h("SpecialKey",   { "fg": s:ui_normal })
+call s:h("SpecialKey",   { "fg": s:ui_subtle })
 call s:h("QuickFixLine", { "bg": s:ui_normal })
 hi! link TabLine StatusLineNC
 hi! link TabLineFill StatusLineNC
@@ -158,6 +166,9 @@ hi! link sassDefinition sassClass
 " Highlights - XML -----------------------------------------
 hi! link xmlAttrib xmlTagName
 hi! link xmlEqual xmlAttrib
+
+" Highlights - netrw ---------------------------------------
+hi! link netrwTreeBar NonText
 
 " FZF ------------------------------------------------------
 let g:fzf_colors =
