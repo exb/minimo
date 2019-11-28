@@ -1,4 +1,4 @@
-" minimo.vim - Vim color scheme
+" minimo.vim - Minimal vim color scheme
 " ----------------------------------------------------------
 " Author:   Endrit Bajo (https://github.com/bajoz/)
 " Version:  0.1
@@ -13,12 +13,12 @@ endif
 
 let g:colors_name = "minimo"
 
-if !exists('g:minimo_color_gui')
-  let g:minimo_color_gui="#8fce5b"
+if !exists('g:minimo_accent_color')
+  let g:minimo_accent_color="#8fce5b"
 endif
 
-if !exists('g:minimo_color_cterm')
-  let g:minimo_color_cterm="119"
+if !exists('g:minimo_accent_color_cterm')
+  let g:minimo_accent_color_cterm="119"
 endif
 
 " Colors ---------------------------------------------------
@@ -36,7 +36,7 @@ let s:ui_faint     = { "gui": "#303030", "cterm": "236" }
 
 let s:green        = { "gui": "#8fce5b", "cterm": "119" }
 let s:red          = { "gui": "#d75f5f", "cterm": "167" }
-let s:accent       = { "gui": g:minimo_color_gui, "cterm": g:minimo_color_cterm }
+let s:accent       = { "gui": g:minimo_accent_color, "cterm": g:minimo_accent_color_cterm }
 
 " Utility Function -----------------------------------------
 function! s:h(group, style)

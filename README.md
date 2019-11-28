@@ -1,6 +1,6 @@
 # Minimo
 
-A dark monocrome vim theme which helps you focus on the content.
+A minimal vim color scheme which helps you focus on the content.
 
 Supported languages:
 - Javascript
@@ -14,8 +14,3 @@ Mileage may vary for other languages.
 
 *CSS*
 ![CSS preview screenshot](css.png)
-
-## To-do
-
-Add support for:
-- Python
