@@ -9,8 +9,4 @@ Supported languages:
 
 Mileage may vary for other languages.
 
-*Javascript*
 ![Javascript preview screenshot](javascript.png)
-
-*CSS*
-![CSS preview screenshot](css.png)
