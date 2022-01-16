@@ -1,6 +1,6 @@
 " minimo.vim - Minimal vim color scheme
 " ----------------------------------------------------------
-" Author:   Endrit Bajo (https://github.com/bajoz/)
+" Author:   Endrit Bajo (https://github.com/exb/)
 " Version:  0.1
 " License:  The MIT License (MIT)
 " ----------------------------------------------------------
@@ -22,7 +22,7 @@ if !exists('g:minimo_accent_color_cterm')
 endif
 
 " Colors ---------------------------------------------------
-let s:bg           = { "gui": "#262626", "cterm": "235" }
+let s:bg           = { "gui": "#080808", "cterm": "232" }
 
 let s:normal       = { "gui": "#e4e4e4", "cterm": "254" }
 let s:dimmed       = { "gui": "#a8a8a8", "cterm": "248" }
@@ -59,7 +59,7 @@ if version >= 700
     call s:h("PmenuSel",     { "bg": s:ui_subtle })
     call s:h("PmenuSbar",    { "bg": s:ui_subtle })
     call s:h("PmenuThumb",   { "bg": s:ui_dimmed })
-    call s:h("ColorColumn",  { "fg": s:ui_normal })
+    call s:h("ColorColumn",  { "fg": s:ui_faint })
     call s:h("SpellBad",     { "gui": "underline", "cterm": "underline" })
     call s:h("SpellCap",     { "gui": "underline", "cterm": "underline" })
     call s:h("SpellLocal",   { "gui": "underline", "cterm": "underline" })
@@ -91,7 +91,7 @@ call s:h("FoldColumn",   { "fg": s:ui_dimmed })
 call s:h("ModeMsg",      { "fg": s:ui_normal })
 call s:h("LineNr",       { "fg": s:ui_subtle })
 call s:h("SpecialKey",   { "fg": s:ui_subtle })
-call s:h("QuickFixLine", { "bg": s:ui_normal })
+call s:h("QuickFixLine", { "bg": s:bg })
 hi! link TabLine StatusLineNC
 hi! link TabLineFill StatusLineNC
 hi! link TabLineSel StatusLine
